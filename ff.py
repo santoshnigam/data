@@ -59,7 +59,7 @@ if choice=="Home":
 
     st.image("https://wallpapercave.com/wp/wp5128415.jpg")
 
-    st.success("Buy Diamonds Safely")
+    st.success("Buy Diamonds Safely Go To home create account then login")
 
 # ---------------- SIGNUP ---------------- #
 elif choice=="Signup":
@@ -99,7 +99,7 @@ elif choice=="Signup":
                         (user, pwd)
                     )
                     conn.commit()
-                    st.success("✅ Account Created Successfully")
+                    st.success("✅ Account Created Successfully go login your account")
 
     # st.title("Create Account")
 
@@ -136,7 +136,7 @@ elif choice=="Login":
 
             st.session_state.user=user
 
-            st.success("Login Successful")
+            st.success("Login Successful go to home")
 
             st.rerun()
 
@@ -269,12 +269,12 @@ elif choice=="Diamond Shop":
 
                     st.write("Payment :",payment)
 
-                    st.image("pay.jpg",width=220)
+                    st.image("pay.jpg",width=240)
 
                     receipt = st.file_uploader(
                             "Upload Payment Screenshot",
-                    type=["png","jpg","jpeg"],
-                    key=i
+                    type=["png","jpg","jpeg"]
+                    
                     )
 
                     if receipt:
@@ -299,12 +299,4 @@ elif choice=="Diamond Shop":
 
                         st.success("🎉 Order Delivered Successfully!")
 
-                    # receipt=st.file_uploader(
-                    # "Upload Payment Screenshot",
-                    # type=["png","jpg","jpeg"],
-                    # key=i
-                    # )
-
-                    # if receipt:
-
-                    #     st.success("Screenshot Uploaded")
+                    
